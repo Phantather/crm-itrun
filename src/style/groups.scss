@@ -13,10 +13,60 @@
     align-items: center;
     column-gap: 8px;
     border-radius: 6px;
+    margin-bottom: 25px;
     span{
       color: #FFF;
       font-size: 16px;
       font-weight: 500;
+    }
+  }
+}
+.singleGroup{
+  &__pagination{
+    display: flex;
+    align-items: center;
+    margin: 25px 0 20px;
+    button{
+      border-radius: 2px;
+      border: 1px solid var(--gray-2, #E2E8F0);
+    }
+  }
+  &__table{
+    tr{
+      &:last-child{
+        border-bottom: 1px solid #E2E8F0;
+      }
+    }
+    &-name{
+      width: 213px;
+      padding-left: 20px;
+      height: 40px;
+      text-align: start;
+      background: var(--white, #FFF);
+      border-top: 1px solid #E2E8F0;
+      border-right: 1px solid #E2E8F0;
+      color: var(--gray-600, #4A5568);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: text;
+
+    }
+    &-tab{
+      width: 44px;
+      height: 40px;
+      color: var(--gray-600, #4A5568);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      background: var(--white, #FFF);
+      border-top: 1px solid #E2E8F0;
+      border-right: 1px solid #E2E8F0;
+      cursor: text;
+      &:last-child{
+        background: #F2F2F2;
+        cursor: text;
+
+      }
     }
   }
 }
