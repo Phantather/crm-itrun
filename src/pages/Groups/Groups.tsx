@@ -15,9 +15,13 @@ import {
     ButtonGroup,
     TableContainer,
 } from '@chakra-ui/react'
+import TheadC from "../../components/Chakra/Thead/TheadC";
+import TrC from "../../components/Chakra/Tr/TrC";
+import {useNavigate} from "react-router-dom";
 
 const Groups = () => {
     const [active,setActive] = useState<string>("a")
+    const navigate = useNavigate()
 
 
     return (
@@ -39,24 +43,10 @@ const Groups = () => {
                         <TabPanel padding={0} className={"groups__table"}>
                             <TableContainer>
                                 <Table variant='simple' >
-                                    <Thead>
-                                        <Tr>
-                                            <Th className={"simbl"}>НАЗВАНИЕ</Th>
-                                            <Th>МЕНТОР</Th>
-                                            <Th isNumeric>САППОРТ</Th>
-                                            <Th isNumeric>КОЛ-ВО СТУДЕНТОВ</Th>
-                                            <Th isNumeric>РАСПИСАНИЕ</Th>
-                                        </Tr>
-                                    </Thead>
+                                    <TheadC/>
                                     <Tbody>
-                                        <Tr>
-                                            <Td>Фронт</Td>
-                                            <Td>Максат</Td>
-                                            <Td isNumeric>Beknur</Td>
-                                            <Td isNumeric>12</Td>
-                                            <Td isNumeric>18:00 - 20:00 (пн-ср-пт)</Td>
-                                        </Tr>
-                                        <Tr>
+                                        <TrC/>
+                                        <Tr onClick={() => navigate("/SingleGroup")}>
                                             <Td>Kids группа</Td>
                                             <Td>Алибек</Td>
                                             <Td isNumeric>Akram</Td>
@@ -107,6 +97,20 @@ const Groups = () => {
                                             <Td isNumeric>Akram</Td>
                                             <Td isNumeric>9</Td>
                                             <Td isNumeric>14:00 - 16:00 (вт-чт-сб)</Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>Фронт</Td>
+                                            <Td>Хамза</Td>
+                                            <Td isNumeric>Nurs</Td>
+                                            <Td isNumeric>7</Td>
+                                            <Td isNumeric>18:00 - 20:00 (пн-ср-пт)</Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>Питон</Td>
+                                            <Td>Султан</Td>
+                                            <Td isNumeric>Aman</Td>
+                                            <Td isNumeric>12</Td>
+                                            <Td isNumeric>20:00 - 22:00 (пн-ср-пт)</Td>
                                         </Tr>
                                     </Tbody>
                                 </Table>

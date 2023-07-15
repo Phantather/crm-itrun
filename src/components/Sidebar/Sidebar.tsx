@@ -49,7 +49,7 @@ const Sidebar = () => {
 
                     </li>
                 </Link>
-                <Link to={"/"}>
+                <Link to={"/groups"}>
                     <li className="aside__menu-link">
                         <Groups/>
                         <span>
